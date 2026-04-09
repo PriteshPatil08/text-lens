@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TextLens.Api/TextLens.Api.csproj" />
+    <Project Path="src/TextLens.Web/TextLens.Web.csproj" />
+  </Folder>
+</Solution>
