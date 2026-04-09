@@ -43,6 +43,27 @@ After every step, append a new section to `LEARNINGS.md` with:
 
 ---
 
+## Writing Code — Piece by Piece
+
+Never write an entire file in one shot. Instead:
+
+1. **Announce the file** — state what it is, why it exists in the project, and what problem it solves.
+2. **Add one logical unit** — a single struct, class, interface, method group, or config block. Explain in 1–2 sentences why this unit is needed before writing it.
+3. **Pause** — confirm the unit makes sense before moving to the next.
+4. **Repeat** for the next logical unit.
+
+If a logical unit is itself large (e.g., a method with complex logic), break it into sub-units (signature → body → error path) and explain each.
+
+The goal is that the user understands *why* every line exists before it's written — not just what it does.
+
+---
+
+## Bash Commands
+
+After every Bash command, follow it with a one-line plain-English explanation of what that command did and what its output means.
+
+---
+
 ## General Behavior
 
 - No Claude co-author lines in git commits.
