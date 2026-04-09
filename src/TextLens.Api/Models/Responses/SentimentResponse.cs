@@ -1,12 +1,13 @@
 namespace TextLens.Api.Models.Responses;
 
-public record SentimentResponse(
+public record ConfidenceScores(double Positive, double Neutral, double Negative);
+
+public record OpinionTarget(
+    string Text,
     string Sentiment,
     ConfidenceScores Scores,
-    IReadOnlyList<SentenceSentiment> Sentences
+    IReadOnlyList<string> Assessments
 );
-
-public record ConfidenceScores(double Positive, double Neutral, double Negative);
 
 public record SentenceSentiment(
     string Text,
@@ -15,9 +16,8 @@ public record SentenceSentiment(
     IReadOnlyList<OpinionTarget> Opinions
 );
 
-public record OpinionTarget(
-    string Text,
+public record SentimentResponse(
     string Sentiment,
     ConfidenceScores Scores,
-    IReadOnlyList<string> Assessments
+    IReadOnlyList<SentenceSentiment> Sentences
 );
