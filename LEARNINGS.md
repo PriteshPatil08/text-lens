@@ -33,3 +33,22 @@ _What we learned (3 lines):_
 - Solution-level builds with `dotnet build`
 
 ---
+
+## Step 3 — Core API
+
+_What we learned (3 lines):_
+> Built a thin ASP.NET Core Minimal API layer with 6 endpoints, each wrapping one Azure AI Language feature via the official SDK.
+> Designed clean DTOs as C# records to represent every response shape — sentiment, key phrases, NER, entity linking, PII, and language detection.
+> Learned how to register a typed Azure SDK client in DI and expose it through a service interface for testability.
+
+**Technical Topics**
+- ASP.NET Core Minimal API (`MapGroup`, `MapPost`, `WithName`, `WithSummary`)
+- C# records as immutable DTOs
+- `ILanguageService` / `LanguageService` pattern (interface + implementation)
+- `TextAnalyticsClient` SDK — `AnalyzeSentimentAsync`, `ExtractKeyPhrasesAsync`, `RecognizeEntitiesAsync`, `RecognizeLinkedEntitiesAsync`, `RecognizePiiEntitiesAsync`, `DetectLanguageAsync`
+- `AnalyzeSentimentOptions.IncludeOpinionMining` for aspect-level sentiment
+- Dependency Injection (`AddSingleton`, `AddScoped`)
+- CORS policy configuration for cross-origin Blazor calls
+- `appsettings.json` + `IConfiguration` for secrets-free config
+
+---
