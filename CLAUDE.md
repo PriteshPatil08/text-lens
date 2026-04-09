@@ -1,0 +1,52 @@
+# CLAUDE.md — TextLens Project Instructions
+
+## After Every Step
+
+At the end of every completed step, always append a **Step Debrief** section with the following structure. Keep each section punchy — bullet points, not essays.
+
+---
+
+### Step Debrief Template
+
+**What we built**
+- One-line summary of the tangible output.
+
+**Objective**
+- Why this step existed in the context of the full project.
+
+**What we learned**
+- Concrete skills, commands, or concepts touched in this step.
+
+**System Design Principle**
+- The one design principle this step best illustrates (e.g., Separation of Concerns, Fail Fast, Config over Code). Name it, then explain it in one sentence applied to what we just did.
+
+**System Design Thinking**
+- How does this step fit into the bigger picture? What would break if we skipped it or did it wrong?
+
+**Read Further**
+- 2–3 specific topics to explore if the user wants to go deeper. Name the topic, not a URL.
+
+**Trivia**
+- One interesting/surprising fact related to the tech or concept used in this step.
+
+**Joke**
+- One dev joke loosely related to the step. Groan-worthy is fine. Terrible puns encouraged.
+
+---
+
+## LEARNINGS.md
+
+After every step, append a new section to `LEARNINGS.md` with:
+- The step number and name as the heading.
+- Exactly 3 lines summarizing what was learned (in a blockquote).
+- A **Technical Topics** bullet list of the key concepts/technologies touched.
+
+---
+
+## General Behavior
+
+- No Claude co-author lines in git commits.
+- Keep responses concise — lead with action, not explanation.
+- Never add features, comments, or error handling beyond what was asked.
+- When scaffolding code, match the project's naming conventions exactly.
+- Secrets always go in environment variables or user-secrets, never in committed files.
