@@ -52,3 +52,25 @@ _What we learned (3 lines):_
 - `appsettings.json` + `IConfiguration` for secrets-free config
 
 ---
+
+## Step 3 — Core API (Rebuilt piece by piece)
+
+_What we learned (3 lines):_
+> Built the full API layer from scratch unit by unit — DTOs, service interface, service implementation, endpoints, and composition root — understanding the purpose of each piece before writing it.
+> Learned how the Anti-Corruption Layer pattern shields the domain from SDK changes, and why DI lifetimes (Singleton vs Scoped) match the lifecycle of the objects they manage.
+> Understood that `Program.cs` is the Composition Root — the one place where all dependencies meet — and that middleware pipeline ordering is architecture, not ceremony.
+
+**Technical Topics**
+- C# `record` types as immutable DTOs
+- Anti-Corruption Layer pattern
+- `ILanguageService` interface — testability and access control
+- `LanguageService` — Azure SDK mapping, `Response<T>`, `.Value`
+- DI lifetimes — `AddSingleton`, `AddScoped`
+- ASP.NET Core Minimal API — `MapGroup`, `MapPost`, `WithName`, `WithSummary`
+- Lambda functions and async endpoint handlers
+- CORS — preflight requests, cross-origin policy
+- Middleware pipeline ordering
+- Fail Fast — startup config validation with `??` throw
+- Configuration hierarchy — environment variables override appsettings
+
+---
